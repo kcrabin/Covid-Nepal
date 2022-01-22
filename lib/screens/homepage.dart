@@ -1,3 +1,4 @@
+import 'package:covid_nepal/constants.dart';
 import 'package:covid_nepal/screens/widgets/bottom_container.dart';
 import 'package:covid_nepal/screens/widgets/recent_update.dart';
 import 'package:covid_nepal/screens/widgets/top_container.dart';
@@ -12,6 +13,7 @@ class HomePage extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         elevation: 0,
+        backgroundColor: appBarColor,
         title: const Text('COVID Nepal'),
       ),
       body: SingleChildScrollView(
@@ -19,7 +21,7 @@ class HomePage extends StatelessWidget {
           padding: const EdgeInsets.all(15),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
+            children: const [
               TopContainer(),
               RecentUpdate(),
               TotalCases(),
