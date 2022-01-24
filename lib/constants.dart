@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+const baseUrl = "https://corona.lmao.ninja/v2/countries/Nepal";
+
 const appBarColor = Color(0xFF006de5);
 const lightBlue = Color(0xFFe0e0ff);
 const darkBlue = Color(0xFF648eec);

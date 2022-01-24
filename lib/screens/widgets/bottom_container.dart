@@ -2,7 +2,8 @@ import 'package:covid_nepal/constants.dart';
 import 'package:flutter/material.dart';
 
 class BottomContainer extends StatelessWidget {
-  const BottomContainer({Key? key}) : super(key: key);
+  final int totalTest;
+  BottomContainer(this.totalTest);
 
   Text getText(String text) {
     return Text(
@@ -24,6 +25,7 @@ class BottomContainer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
+        margin: const EdgeInsets.symmetric(vertical: 10),
         padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 10),
         decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(10),
@@ -38,15 +40,15 @@ class BottomContainer extends StatelessWidget {
             ]),
         child: Column(
           children: [
-            getData(label: "PCR test", data: '123879'),
-            const Divider(
-              thickness: 1,
-            ),
-            getData(label: "Isolation", data: '123879'),
-            const Divider(
-              thickness: 1,
-            ),
-            getData(label: "Quarantined", data: '123879'),
+            getData(label: "PCR test", data: '$totalTest'),
+            // const Divider(
+            //   thickness: 1,
+            // ),
+            // getData(label: "Isolation", data: '123879'),
+            // const Divider(
+            //   thickness: 1,
+            // ),
+            // getData(label: "Quarantined", data: '123879'),
           ],
         ));
   }

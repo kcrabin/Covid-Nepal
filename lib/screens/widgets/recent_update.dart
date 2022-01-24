@@ -5,7 +5,12 @@ import 'package:covid_nepal/screens/widgets/data_tile.dart';
 import 'package:flutter/material.dart';
 
 class RecentUpdate extends StatelessWidget {
-  const RecentUpdate({Key? key}) : super(key: key);
+  final int newCases;
+  final int recovered;
+  final int deaths;
+
+  RecentUpdate(
+      {required this.newCases, required this.recovered, required this.deaths});
 
   @override
   Widget build(BuildContext context) {
@@ -31,7 +36,7 @@ class RecentUpdate extends StatelessWidget {
                   child: DataTile(
                     name: 'New Cases',
                     backgroundColor: lightBlue,
-                    data: 22922,
+                    data: newCases,
                     icon: Icons.coronavirus_outlined,
                     textColor: darkBlue,
                   ),
@@ -40,7 +45,7 @@ class RecentUpdate extends StatelessWidget {
                   child: DataTile(
                     name: 'Recovered',
                     backgroundColor: lightGreen,
-                    data: 22922,
+                    data: recovered,
                     icon: Icons.sentiment_satisfied_alt_outlined,
                     textColor: darkGreen,
                   ),
@@ -50,7 +55,7 @@ class RecentUpdate extends StatelessWidget {
             DataTile(
               name: 'Deaths',
               backgroundColor: lightRed,
-              data: 22922,
+              data: deaths,
               icon: Icons.sentiment_dissatisfied_outlined,
               textColor: darkRed,
             ),

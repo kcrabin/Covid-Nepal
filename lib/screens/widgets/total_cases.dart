@@ -6,7 +6,17 @@ import '../../constants.dart';
 import 'data_tile.dart';
 
 class TotalCases extends StatelessWidget {
-  const TotalCases({Key? key}) : super(key: key);
+  final int cases;
+  final int infected;
+  final int recovered;
+  final int deaths;
+
+  TotalCases({
+    required this.cases,
+    required this.deaths,
+    required this.infected,
+    required this.recovered,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -30,7 +40,7 @@ class TotalCases extends StatelessWidget {
                 child: DataTile(
                   name: 'Cases',
                   backgroundColor: lightGrey,
-                  data: 22922,
+                  data: cases,
                   icon: Icons.coronavirus_outlined,
                   textColor: darkGrey,
                 ),
@@ -39,7 +49,7 @@ class TotalCases extends StatelessWidget {
                 child: DataTile(
                   name: 'Infected',
                   backgroundColor: lightBlue,
-                  data: 22922,
+                  data: infected,
                   icon: Icons.thermostat,
                   textColor: darkBlue,
                 ),
@@ -52,7 +62,7 @@ class TotalCases extends StatelessWidget {
                 child: DataTile(
                   name: 'Recovered',
                   backgroundColor: lightGreen,
-                  data: 22922,
+                  data: recovered,
                   icon: Icons.sentiment_satisfied_alt_outlined,
                   textColor: darkGreen,
                 ),
@@ -61,7 +71,7 @@ class TotalCases extends StatelessWidget {
                 child: DataTile(
                   name: 'Deaths',
                   backgroundColor: lightRed,
-                  data: 22922,
+                  data: deaths,
                   icon: Icons.sentiment_dissatisfied_outlined,
                   textColor: darkRed,
                 ),
