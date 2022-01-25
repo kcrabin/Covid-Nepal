@@ -1,8 +1,10 @@
 // ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
 
 import 'package:covid_nepal/constants.dart';
-import 'package:covid_nepal/screens/widgets/data_tile.dart';
+
 import 'package:flutter/material.dart';
+
+import 'data_tile.dart';
 
 class RecentUpdate extends StatelessWidget {
   final int newCases;

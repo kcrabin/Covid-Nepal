@@ -21,7 +21,7 @@ class DataTile extends StatelessWidget {
       padding: const EdgeInsets.all(10),
       height: 90,
       decoration: BoxDecoration(
-          color: backgroundColor,
+          color: backgroundColor.withOpacity(0.8),
           borderRadius: BorderRadius.circular(10),
           boxShadow: [
             BoxShadow(

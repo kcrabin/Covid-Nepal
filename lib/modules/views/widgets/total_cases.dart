@@ -2,7 +2,7 @@
 
 import 'package:flutter/material.dart';
 
-import '../../constants.dart';
+import '../../../constants.dart';
 import 'data_tile.dart';
 
 class TotalCases extends StatelessWidget {
